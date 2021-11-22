@@ -1,0 +1,11 @@
+.DS_Store
+
+# Pycache 
+__pycache__/*
+
+# Any floating netcdf4 file
+*.nc 
+*/*.nc
+
+# Ignore folder 
+ignore/*
