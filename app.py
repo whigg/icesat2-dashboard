@@ -32,5 +32,14 @@ with st.beta_container():
 chosen_var = st.selectbox("Choose your variable", variables)
 
 with st.beta_container():
-    st.subheader(f"Showing:  {chosen_va}")
+    st.subheader(f"Showing:  {chosen_var}")
     st.write("")
+
+
+# Plot data 
+is2_ds = read_is2_data() 
+is2_da = is2_ds[chosen_var]
+
+# Create plot 
+fig = interactiveArcticMaps(da=is2_da, vmin=0, vmax=4, frame_width=500)
+st.write(fig)
